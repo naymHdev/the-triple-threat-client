@@ -1,15 +1,18 @@
 import  { useState, useEffect } from 'react';
 
-import { IoIosArrowDown } from "react-icons/io";
+// import { IoIosArrowDown } from "react-icons/io";
 import { Link, NavLink } from 'react-router-dom';
-import { FcBiohazard } from "react-icons/fc";
+// import { FcBiohazard } from "react-icons/fc";
 import { FcCustomerSupport } from "react-icons/fc";
+
+
 
 
 
 const Navbar = () => {
   const [shadow, setShadow] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +25,7 @@ const Navbar = () => {
 
 
   return (
-    <div className="bg-[#37225B] shadow  w-full  py-3 -mb-8 hidden md:block">
+    <div className="bg-[#37225B]  shadow  w-full  py-3 -mb-8 hidden md:block">
       <nav className={`max-w-7xl mx-auto flex items-center justify-between  px-6 transition-shadow ${shadow ? '' : ''}`}>
         <Link to="/" className="flex items-center">
          
@@ -106,6 +109,7 @@ Post Details
        <button className="px-2 py-2 bg-[#9333ea] rounded-md text-white text-[14px] cursor-pointer">
          Sign In
         </button>
+     
     
       
       </nav>
