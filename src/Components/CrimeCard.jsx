@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
-import  { useState } from "react";
+import { useState } from "react";
 import { FiThumbsUp, FiThumbsDown } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const CrimeCard = ({
+    id,
   title,
   description,
   location,
@@ -13,17 +15,30 @@ const CrimeCard = ({
   initialUpvotes = 0,
   initialDownvotes = 0,
 }) => {
+    const navigate = useNavigate();
+    const handleCardClick = () => {
+        navigate(`/crime-details/${id}`);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+      };
   const [upvotes, setUpvotes] = useState(initialUpvotes);
   const [downvotes, setDownvotes] = useState(initialDownvotes);
 
   return (
-    <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg max-w-md w-full transform hover:scale-105 transition duration-300">
+    <div  className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg max-w-md w-full transform hover:scale-105 transition duration-300">
       {/* Media Section */}
       {image ? (
-        <img src={image} alt={title} className="w-full h-56 object-cover rounded-xl" />
+        <img
+        onClick={handleCardClick}
+          src={image}
+          alt={title}
+          className="w-full h-56 object-cover rounded-xl"
+        />
       ) : (
         video && (
-          <video controls className="w-full h-56 rounded-xl">
+          <video onClick={handleCardClick} controls className="w-full h-56 rounded-xl">
             <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -31,9 +46,11 @@ const CrimeCard = ({
       )}
 
       {/* Crime Information */}
-      <div className="mt-4">
-        <h2 className="text-xl font-bold text-gray-800 dark:text-white">{title}</h2>
-        <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+      <div  className="mt-4">
+        <h2 onClick={handleCardClick}  className="text-xl font-bold text-gray-800 dark:text-white hover:underline cursor-pointer">
+          {title}
+        </h2>
+        <p onClick={handleCardClick} className="text-sm text-gray-600 dark:text-gray-300 mt-2">
           {description}
         </p>
 
@@ -62,7 +79,9 @@ const CrimeCard = ({
             <span>{downvotes}</span>
           </button>
         </div>
-        <button className="text-blue-600 hover:underline cursor-pointer">Add Comment + Proof</button>
+        <button className="text-blue-600 hover:underline cursor-pointer">
+          Add Comment + Proof
+        </button>
       </div>
     </div>
   );
