@@ -5,7 +5,7 @@ import MobileNavbar from "../Pages/Home/Navbar/MobileNavbar";
 
 const MainLayout = () => {
     return (
-        <div>
+        <div className="">
             <Navbar/>
             <MobileNavbar/>
          <Outlet/>
