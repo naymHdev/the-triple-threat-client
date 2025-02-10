@@ -1,10 +1,14 @@
-import Home from "../Pages/Home/Home/Home";
+import { Outlet } from "react-router-dom";
+import Navbar from "../Pages/Home/Navbar/Navbar";
+import MobileNavbar from "../Pages/Home/Navbar/MobileNavbar";
 
 
 const MainLayout = () => {
     return (
         <div>
-            <Home/>
+            <Navbar/>
+            <MobileNavbar/>
+         <Outlet/>
         </div>
     );
 };
