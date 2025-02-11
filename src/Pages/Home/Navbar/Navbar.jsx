@@ -52,10 +52,10 @@ const Navbar = () => {
 
         <li>
   <NavLink
-    to="/report"
+    to="/all-reports"
     className={({ isActive }) =>
       isActive
-        ? 'font-inter text-base  py-1 text-[14px]relative after:content-[""] after:absolute after:left-0 after:bottom-[-2px] after:w-full after:h-[3px] after:bg-[#78b0ff]'
+        ? 'font-inter text-base  py-1 text-[14px] relative after:content-[""] after:absolute after:left-0 after:bottom-[-2px] after:w-full after:h-[3px] after:bg-[#78b0ff]'
         : 'font-inter text-base hover:text-[#78b0ff] text-[14px]'
     }
   >
