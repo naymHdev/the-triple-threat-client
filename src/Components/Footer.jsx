@@ -2,7 +2,7 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/f
 
 const Footer = () => {
   return (
-    <footer className="bg-[#37225B] py-10 mt-10 text-white">
+    <footer className="bg-[#37225B] py-10 mt-10 text-white ">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
         {/* Quick Links */}
         <div>

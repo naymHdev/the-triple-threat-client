@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { FiThumbsUp, FiThumbsDown } from "react-icons/fi";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CrimeCard = ({
     id,
@@ -79,9 +79,9 @@ const CrimeCard = ({
             <span>{downvotes}</span>
           </button>
         </div>
-        <button className="text-blue-600 hover:underline cursor-pointer">
+        <Link onClick={handleCardClick} className="text-blue-600 hover:underline cursor-pointer">
           Add Comment + Proof
-        </button>
+        </Link>
       </div>
     </div>
   );

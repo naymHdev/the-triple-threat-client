@@ -61,7 +61,7 @@ const ReportContent = () => {
     // More posts...
   ];
 
-  const postsPerPage = 2; // Number of posts per page
+  const postsPerPage = 4; // Number of posts per page
 
   // Filter posts based on search, selected division, district, and sort criteria
   const filteredPosts = posts.filter((post) => {
@@ -147,7 +147,7 @@ const ReportContent = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 p-6 lg:h-[600px]">
+    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 p-6 ">
       {/* Left Side Options */}
       <div className="col-span-1 space-y-4">
         <h2 className="text-xl font-semibold">Filter & Search</h2>
