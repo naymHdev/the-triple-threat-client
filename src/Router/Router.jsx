@@ -8,6 +8,7 @@ import AllReports from "../Pages/AllReports/AllReports/AllReports";
 import DashboardLayout from "../Layout/DashboardLayout";
 import Users from "../Dashboard/Users/Users";
 import BannedUsers from "../Dashboard/BannedUsers/BannedUsers";
+import LeaderBoard from "../Pages/LeaderBoard/LeaderBoard";
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,9 @@ export const router = createBrowserRouter([
       },{
         path:'/all-reports',
         element:<AllReports/>
+      },{
+        path:'/leaderboard',
+        element:<LeaderBoard/>
       }
     ],
   },{

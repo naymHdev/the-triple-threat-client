@@ -89,7 +89,7 @@ Post Details
 
         <li>
   <NavLink
-    to="/report"
+    to="/leaderboard"
     className={({ isActive }) =>
       isActive
         ? 'font-inter text-base  py-1 text-[14px] relative after:content-[""] after:absolute after:left-0 after:bottom-[-2px] after:w-full after:h-[3px] after:bg-[#78b0ff]'
