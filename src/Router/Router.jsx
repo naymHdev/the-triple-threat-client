@@ -5,6 +5,9 @@ import CrimeDetails from "../Components/CrimeDetails";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import AllReports from "../Pages/AllReports/AllReports/AllReports";
+import DashboardLayout from "../Layout/DashboardLayout";
+import Users from "../Dashboard/Users/Users";
+import BannedUsers from "../Dashboard/BannedUsers/BannedUsers";
 
 export const router = createBrowserRouter([
   {
@@ -29,5 +32,20 @@ export const router = createBrowserRouter([
         element:<AllReports/>
       }
     ],
-  },
+  },{
+    path:'/admin-dashboard',
+    element:<DashboardLayout/>,
+    children:[
+      {
+        path:"",
+        element:<h1 className="text-center">Home Dashboard</h1>
+      },{
+        path:'users',
+        element:<Users/>
+      },{
+        path:'banned-users',
+        element:<BannedUsers/>
+      },
+    ]
+  }
 ]);
