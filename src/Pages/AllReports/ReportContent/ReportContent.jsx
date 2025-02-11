@@ -242,7 +242,7 @@ const ReportContent = () => {
   {/* Pagination Control */}
   {
     currentPosts.length > 0 && (
-      <div className="flex justify-center my-5 lg:ml-[750px] ">
+      <div className="flex justify-center my-5 lg:ml-[750px]  ">
         <div className={`flex gap-4 `}>
           <button
             onClick={handlePreviousPage}
