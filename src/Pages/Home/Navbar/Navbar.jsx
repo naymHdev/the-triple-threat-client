@@ -106,9 +106,9 @@ Post Details
         </ul>
 
  
-       <button className="px-2 py-2 bg-[#9333ea] rounded-md text-white text-[14px] cursor-pointer">
+       <Link to={'/login'} className="px-2 py-2 bg-[#9333ea] rounded-md text-white text-[14px] cursor-pointer">
          Sign In
-        </button>
+        </Link>
      
     
       
