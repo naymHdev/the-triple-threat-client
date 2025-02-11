@@ -1,7 +1,9 @@
 
+import { Link, useNavigate } from "react-router-dom";
 import CrimeCard from "../../../Components/CrimeCard";
 
 const RecentCrimeList = () => {
+    const navigate = useNavigate();
   const posts = [
     {
         id:1,
@@ -76,6 +78,15 @@ const RecentCrimeList = () => {
     (a, b) => new Date(b.postTime).getTime() - new Date(a.postTime).getTime()
   );
 
+  const handleUp = () =>{
+    navigate(`/all-reports`); 
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+  }
+
+
 
   return (
   <section>
@@ -91,7 +102,7 @@ const RecentCrimeList = () => {
   ))}
 </div>
 <div className="flex justify-center my-5">
-<button className='px-3 py-2 bg-[#9333ea] drop-shadow-md font-inter text-white   rounded cursor-pointer '>View More Crimes</button>
+<Link onClick={handleUp}  className='px-3 py-2 bg-[#9333ea] drop-shadow-md font-inter text-white   rounded cursor-pointer '>View More Crimes</Link>
 </div>
 
   </section>
