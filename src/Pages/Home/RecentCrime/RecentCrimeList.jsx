@@ -79,7 +79,7 @@ const RecentCrimeList = () => {
 
   return (
   <section>
- <h1 className="text-3xl font-bold text-black dark:text-white mb-4 text-center my-10 drop-shadow-md">
+ <h1 className="text-3xl font-bold text-black  mb-4 text-center my-10 drop-shadow-md">
   Recent Crimes
   {/* <span className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-blue-500 to-green-400 rounded-md"></span> */}
 </h1>

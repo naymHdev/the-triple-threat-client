@@ -27,7 +27,7 @@ const CrimeCard = ({
   const [downvotes, setDownvotes] = useState(initialDownvotes);
 
   return (
-    <div  className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-lg max-w-md w-full transform hover:scale-105 transition duration-300">
+    <div  className="bg-white p-4 rounded-2xl shadow-lg max-w-md w-full transform hover:scale-105 transition duration-300">
       {/* Media Section */}
       {image ? (
         <img
@@ -47,14 +47,14 @@ const CrimeCard = ({
 
       {/* Crime Information */}
       <div  className="mt-4">
-        <h2 onClick={handleCardClick}  className="text-xl font-bold text-gray-800 dark:text-white hover:underline cursor-pointer">
+        <h2 onClick={handleCardClick}  className="text-xl font-bold text-gray-800  hover:underline cursor-pointer">
           {title}
         </h2>
-        <p onClick={handleCardClick} className="text-sm text-gray-600 dark:text-gray-300 mt-2">
+        <p onClick={handleCardClick} className="text-sm text-gray-600  mt-2">
           {description}
         </p>
 
-        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mt-4 text-sm text-gray-500 ">
           <p>📍 {location}</p>
           <p>🕒 Crime Time: {new Date(crimeTime).toLocaleString()}</p>
           <p>🗓️ Post Time: {new Date(postTime).toLocaleString()}</p>
