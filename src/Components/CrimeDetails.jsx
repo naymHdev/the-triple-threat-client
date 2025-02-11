@@ -79,7 +79,7 @@ const CrimeDetails = () => {
   };
 
   if (loading) {
-    return <p className="flex justify-center h-screen items-center"><FiLoader className="text-[2.8rem] animate-spin text-[#3B9DF8]" /></p>;
+    return <p className="flex justify-center h-screen items-center"><FiLoader className="text-[2.8rem] animate-spin text-[#9333ea]" /></p>;
   }
 
   if (!crimeData) {
