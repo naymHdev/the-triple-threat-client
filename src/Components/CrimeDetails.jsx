@@ -89,10 +89,10 @@ const CrimeDetails = () => {
   const { title, description, location, postTime, crimeTime, image, video } = crimeData;
 
   return (
-    <div className="p-6 dark:bg-gray-900 min-h-screen text-gray-800 dark:text-white max-w-7xl mx-auto">
+    <div className="p-6  min-h-screen text-gray-800  max-w-7xl mx-auto">
       <h1 className="text-3xl font-semibold drop-shadow-md">{title}</h1>
       <div>
-        <span className="text-gray-800 dark:text-white">Post Verification Score: 100</span>
+        <span className="text-gray-800 ">Post Verification Score: 100</span>
       </div>
       {image && <img src={image} alt={title} className="rounded-xl w-full object-cover mb-4" />}
       {video && <video src={video} controls className="rounded-xl w-full h-96 mb-4" />}
