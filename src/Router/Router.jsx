@@ -9,6 +9,7 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import Users from "../Dashboard/Users/Users";
 import BannedUsers from "../Dashboard/BannedUsers/BannedUsers";
 import LeaderBoard from "../Pages/LeaderBoard/LeaderBoard";
+import CrimePost from "../Pages/CrimePost/CrimePost/CrimePost";
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +35,9 @@ export const router = createBrowserRouter([
       },{
         path:'/leaderboard',
         element:<LeaderBoard/>
+      },{
+        path:'/report-crime',
+        element:<CrimePost/>
       }
     ],
   },{
