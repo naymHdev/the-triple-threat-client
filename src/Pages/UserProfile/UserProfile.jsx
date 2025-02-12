@@ -1,5 +1,6 @@
-import { CiEdit } from "react-icons/ci";
 import MyReports from "./MyReports";
+import UserDetailsModal from "./UserDetailsModal";
+import UserImageModal from "./UserImageModal";
 
 const UserProfile = () => {
   return (
@@ -21,18 +22,14 @@ const UserProfile = () => {
             </div>
           </div>
           <div>
-            <button className="group hover:cursor-pointer hover:bg-[#37225B] hover:text-white hover:border-none border border-neutral-300 px-4 py-2 flex gap-3 items-center justify-center font-medium  rounded-full">
-              Edit <CiEdit className=" group-hover:text-white text-lg" />
-            </button>
+            <UserImageModal />
           </div>
         </div>
         {/* Personal Information */}
         <section className="mt-8 border rounded-2xl border-neutral-200 p-4">
           <div className=" flex items-center justify-between">
             <h2 className=" text-lg font-semibold ">Personal Information</h2>
-            <button className="group hover:cursor-pointer hover:bg-[#37225B] hover:text-white hover:border-none border border-neutral-300 px-4 py-2 flex gap-3 items-center justify-center font-medium  rounded-full">
-              Edit <CiEdit className=" group-hover:text-white text-lg" />
-            </button>
+            <UserDetailsModal />
           </div>
           <div className=" mt-6 grid grid-cols-1 md:grid-cols-2">
             <div className=" space-y-6">
