@@ -71,7 +71,7 @@ const Navbar = () => {
               Report Crime
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink
               to="/report"
               className={({ isActive }) =>
@@ -82,7 +82,7 @@ const Navbar = () => {
             >
               Post Details
             </NavLink>
-          </li>
+          </li> */}
 
           <li>
             <NavLink

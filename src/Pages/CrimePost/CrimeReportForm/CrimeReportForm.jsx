@@ -88,18 +88,21 @@ const CrimeReportForm = () => {
     }
   }, [selectedDivision]);
 
+  const postVarificationsScore = 0; 
+
+
   const onSubmit = (data) => {
     const finalData = {
       title: data.title,
       description: description,
-      division: division,
-      district: district,
+      division: selectedDistrict,
+      district: selectedDistrict,
       crimeTime: crimeTime,
       imageUrl: imageUrl,
       videoUrl: videoUrl,
       postTime: new Date().toISOString(),
-      selectedDivision,
-      selectedDistrict,
+      postVarificationsScore
+    
     };
     console.log("Final Submitted Data:", finalData);
   };
@@ -124,8 +127,8 @@ const CrimeReportForm = () => {
           )}
         </div>
 
-        {/* Crime Description */}
-        <div>
+
+        {/* <div>
           <label className="block text-sm font-medium">Description</label>
           <textarea
             {...register("description", {
@@ -136,10 +139,8 @@ const CrimeReportForm = () => {
             className="textarea textarea-bordered w-full"
             placeholder="Describe the crime"
           />
-          {errors.description && (
-            <p className="text-red-500 text-sm">{errors.description.message}</p>
-          )}
-        </div>
+          {errors.description && <p className="text-red-500 text-sm">{errors.description.message}</p>}
+        </div> */}
 
         {/* Division and District */}
         <div className="grid grid-cols-2 gap-6">
