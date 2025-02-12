@@ -70,9 +70,9 @@ const MobileNavbar = ({ active }) => {
                
 
           <div className="flex items-center gap-[16px]">
-          <button className="px-2 py-2 bg-[#9333ea] rounded-md text-white text-[14px] cursor-pointer">
+          <Link to='/login' className="px-2 py-2 bg-[#9333ea] rounded-md text-white text-[14px] cursor-pointer">
          Sign In
-        </button>
+        </Link>
             <AiOutlineMenu
               onClick={() => setIsSidebarOpen(true)}
               className="text-[1.6rem] text-white  menu-icon"
@@ -107,7 +107,7 @@ const MobileNavbar = ({ active }) => {
 </li>
 <li>
   <NavLink
-    to="/report"
+    to="/all-reports"
     className={({ isActive }) =>
       isActive
         ? 'font-inter text-base  py-1 text-[14px]relative after:content-[""] after:absolute after:left-0 after:bottom-[-2px] after:w-full after:h-[3px] after:bg-[#78b0ff]'
