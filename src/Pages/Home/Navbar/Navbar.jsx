@@ -16,6 +16,8 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  let role = "user";
+
   return (
     <div className="bg-[#37225B]  shadow  w-full  py-3 -mb-8 hidden md:block">
       <nav
@@ -96,12 +98,43 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <Link
-          to={"/login"}
-          className="px-2 py-2 bg-[#9333ea] rounded-md text-white text-[14px] cursor-pointer"
-        >
-          Sign In
-        </Link>
+        {role && role === "user" ? (
+          <>
+            <div className="dropdown dropdown-hover">
+              <div tabIndex={0} className="avatar">
+                <div className="w-10 rounded-full border-none">
+                  <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                </div>
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu z-[1] bg-gray-100 rounded w-[120px] py-3"
+              >
+                {role === "user" && (
+                  <>
+                    <div className="flex flex-col space-y-3">
+                      <Link
+                        className="font-medium text-black hover:bg-gray-200 px-3 py-2 rounded"
+                        to="/user-profile"
+                      >
+                        Profile
+                      </Link>
+                    </div>
+                  </>
+                )}
+              </ul>
+            </div>
+          </>
+        ) : (
+          <>
+            <Link
+              to={"/login"}
+              className="px-2 py-2 bg-[#9333ea] rounded-md text-white text-[14px] cursor-pointer"
+            >
+              Sign In
+            </Link>
+          </>
+        )}
       </nav>
     </div>
   );

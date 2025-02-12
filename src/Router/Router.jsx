@@ -10,6 +10,7 @@ import Users from "../Dashboard/Users/Users";
 import BannedUsers from "../Dashboard/BannedUsers/BannedUsers";
 import LeaderBoard from "../Pages/LeaderBoard/LeaderBoard";
 import CrimePost from "../Pages/CrimePost/CrimePost/CrimePost";
+import UserProfile from "../Pages/UserProfile/UserProfile";
 
 export const router = createBrowserRouter([
   {
@@ -21,39 +22,51 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path:'/crime-details/:id',
-        element:<CrimeDetails/>
-      },{
-        path:'/login',
-        element:<Login/>
-      },{
-        path:'/register',
-        element:<Register/>
-      },{
-        path:'/all-reports',
-        element:<AllReports/>
-      },{
-        path:'/leaderboard',
-        element:<LeaderBoard/>
-      },{
-        path:'/report-crime',
-        element:<CrimePost/>
-      }
-    ],
-  },{
-    path:'/admin-dashboard',
-    element:<DashboardLayout/>,
-    children:[
-      {
-        path:"",
-        element:<h1 className="text-center">Home Dashboard</h1>
-      },{
-        path:'users',
-        element:<Users/>
-      },{
-        path:'banned-users',
-        element:<BannedUsers/>
+        path: "/crime-details/:id",
+        element: <CrimeDetails />,
       },
-    ]
-  }
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+      {
+        path: "/all-reports",
+        element: <AllReports />,
+      },
+      {
+        path: "/leaderboard",
+        element: <LeaderBoard />,
+      },
+      {
+        path: "/report-crime",
+        element: <CrimePost />,
+      },
+      {
+        path: "/user-profile",
+        element: <UserProfile />,
+      },
+    ],
+  },
+  {
+    path: "/admin-dashboard",
+    element: <DashboardLayout />,
+    children: [
+      {
+        path: "",
+        element: <h1 className="text-center">Home Dashboard</h1>,
+      },
+      {
+        path: "users",
+        element: <Users />,
+      },
+      {
+        path: "banned-users",
+        element: <BannedUsers />,
+      },
+    ],
+  },
 ]);
